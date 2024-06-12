@@ -1,0 +1,25 @@
+﻿<Window x:Class="Word.Redactor2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Word"
+        mc:Ignorable="d"
+        Title="Redactor2" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="Write" Grid.Column="1" Content="Добавить" Click="Write_Click"/>
+        <DataGrid x:Name="Table" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <Button Grid.ColumnSpan="2" x:Name="Create_Excel"  Grid.Row="2" Content="Сохранить в Excel" Click="Create_Excel_Click"/>
+        <Button Grid.ColumnSpan="2" x:Name="Send_Excel" Grid.Row="3" Content="Отправить по почте" Click="Send_Excel_Click"/>
+    </Grid>
+</Window>
